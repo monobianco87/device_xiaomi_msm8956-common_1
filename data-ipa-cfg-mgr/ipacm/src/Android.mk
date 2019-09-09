@@ -29,7 +29,7 @@ LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
 LOCAL_CFLAGS := -v
 LOCAL_CFLAGS += -DFEATURE_IPA_ANDROID
-LOCAL_CFLAGS += -DFEATURE_IPACM_HAL -Wall -Werror -Wno-error=macro-redefined
+LOCAL_CFLAGS += -DFEATURE_IPACM_HAL -Wall -Werror -Wno-error=macro-redefined -Wno-enum-compare
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 LOCAL_CFLAGS += -DDEBUG
 endif
@@ -42,7 +42,6 @@ filetoadd = bionic/libc/kernel/arch-arm/asm/posix_types.h
 LOCAL_CFLAGS += $(shell if [ -a $(filetoadd) ] ; then echo -include $(filetoadd) ; fi ;)
 filetoadd = bionic/libc/kernel/arch-arm/asm/byteorder.h
 LOCAL_CFLAGS += $(shell if [ -a $(filetoadd) ] ; then echo -include $(filetoadd) ; fi ;)
-
 
 LOCAL_SRC_FILES := IPACM_Main.cpp \
 		IPACM_EvtDispatcher.cpp \
