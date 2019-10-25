@@ -223,6 +223,10 @@ TARGET_LD_SHIM_LIBS := \
 include device/qcom/sepolicy-legacy/sepolicy.mk
 #BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 
+# System As Root
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+BOARD_ROOT_EXTRA_FOLDERS := dsp firmware persist
+
 # Thermal
 USE_DEVICE_SPECIFIC_THERMAL := true
 
