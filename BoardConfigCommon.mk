@@ -222,6 +222,7 @@ include device/qcom/sepolicy-legacy/sepolicy.mk
 
 # System As Root
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+BOARD_ROOT_EXTRA_FOLDERS := persist
 BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/dsp:/dsp \
     /vendor/firmware_mnt:/firmware
