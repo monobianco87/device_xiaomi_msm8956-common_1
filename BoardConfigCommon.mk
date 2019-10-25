@@ -47,9 +47,8 @@ TARGET_BOOTLOADER_BOARD_NAME := msm8952
 TARGET_NO_BOOTLOADER := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 ramoops_memreserve=4M
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 ramoops_memreserve=4M loop.max_part=7  firmware_class.path=/vendor/firmware_mnt/image
 BOARD_KERNEL_CMDLINE += skip_initramfs rootwait ro init=/init root=/dev/dm-0 dm=\"system none ro,0 1 android-verity /dev/mmcblk0p27\"
-BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -225,8 +224,10 @@ include device/qcom/sepolicy-legacy/sepolicy.mk
 
 # System As Root
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
-BOARD_ROOT_EXTRA_FOLDERS := dsp firmware persist
-
+BOARD_ROOT_EXTRA_SYMLINKS := \
+    /mnt/vendor/persist:/persist \
+    /vendor/dsp:/dsp \
+    /vendor/firmware_mnt:/firmware
 # Thermal
 USE_DEVICE_SPECIFIC_THERMAL := true
 
