@@ -453,7 +453,8 @@ service iop /system/vendor/bin/iop
     socket iop seqpacket 0666 root system
 
 on property:sys.boot_completed=1
-    write /dev/kmsg "Boot completed"
+    setprop vendor.post_boot.parsed 1
+    write /dev/kmsg "Boot completed "
     #WDSP FW boot sysfs node used by STHAL
     chown media audio /sys/kernel/wdsp0/boot
     chown media audio /sys/kernel/wcd_cpe0/fw_name
