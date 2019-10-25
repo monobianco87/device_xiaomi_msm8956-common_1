@@ -221,8 +221,8 @@ TARGET_LD_SHIM_LIBS := \
     /system/lib64/lib-imsvideocodec.so|libshim_ims.so
 
 # SELinux
-include device/qcom/sepolicy-legacy/sepolicy.mk
-#BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
+# include device/qcom/sepolicy-legacy/sepolicy.mk
+# BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 
 # System As Root
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
