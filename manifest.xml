@@ -377,17 +377,6 @@
         </interface>
         <fqname>@1.0::ILocHidlGnss/gnss_vendor</fqname>
     </hal>
- 
-   <!-- Thermal HAL Service -->
-    <hal format="hidl">
-        <name>android.hardware.thermal</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IThermal</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl">
         <name>android.hardware.vr</name>
         <transport>hwbinder</transport>
