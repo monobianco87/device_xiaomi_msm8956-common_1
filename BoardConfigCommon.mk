@@ -225,7 +225,6 @@ include device/qcom/sepolicy-legacy/sepolicy.mk
 # System As Root
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_ROOT_EXTRA_SYMLINKS := \
-    /mnt/vendor/persist:/persist \
     /vendor/dsp:/dsp \
     /vendor/firmware_mnt:/firmware
 # Thermal
