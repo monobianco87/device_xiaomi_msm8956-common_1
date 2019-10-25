@@ -54,6 +54,22 @@ $(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(IMS_SYMLINKS)
 
+WCNSS_DICT_DAT := $(TARGET_OUT_VENDOR)/firmware/wlan/prima/WCNSS_wlan_dictionary.dat
+$(WCNSS_DICT_DAT): $(LOCAL_INSTALLED_MODULE)
+	@echo "WCNSS_wlan_dictionary.dat firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /mnt/vendor/persist/$(notdir $@) $@
+
+WLAN_MAC := $(TARGET_OUT_VENDOR)/firmware/wlan/prima/wlan_mac.bin
+$(WLAN_MAC): $(LOCAL_INSTALLED_MODULE)
+	@echo "wlan_mac.bin firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /mnt/vendor/persist/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(WCNSS_DICT_DAT) $(WLAN_MAC)
+
 # RFS symlinks
 RFS_MSM_ADSP_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/msm/adsp/
 $(RFS_MSM_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
