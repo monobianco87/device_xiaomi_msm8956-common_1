@@ -218,6 +218,7 @@ TARGET_LD_SHIM_LIBS := \
 # include device/qcom/sepolicy-legacy/sepolicy.mk
 # BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy/minimal
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # System As Root
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
