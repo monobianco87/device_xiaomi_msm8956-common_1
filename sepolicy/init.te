@@ -1,4 +1,5 @@
 allow init debugfs:file write;
+allow init camera_device:file { create_file_perms };
 
 # DT2W
 allow init sysfs_dt2w:file { rw_file_perms setattr };
