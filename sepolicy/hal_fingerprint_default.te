@@ -12,5 +12,6 @@ allow hal_fingerprint_default storage_file:lnk_file { read };
 
 binder_call(hal_fingerprint_default, servicemanager)
 binder_call(hal_fingerprint_default, keystore)
+allow hal_fingerprint_default fingerprintd_data_file:dir { rw_dir_perms };
 
 add_service(hal_fingerprint_default, fingerprintd_custom_service);
