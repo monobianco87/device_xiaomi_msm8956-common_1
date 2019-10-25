@@ -324,21 +324,6 @@
     <string name="config_networkLocationProviderPackageName" translatable="false">com.qualcomm.location</string>
     <string name="config_fusedLocationProviderPackageName" translatable="false">com.qualcomm.location</string>
 
-    <!-- Default list of files pinned by the Pinner Service -->
-    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
-        <item>"/system/framework/arm64/boot-framework.oat"</item>
-        <item>"/system/framework/boot-framework.vdex"</item>
-        <item>"/system/framework/oat/arm64/services.odex"</item>
-        <item>"/system/framework/oat/arm64/services.vdex"</item>
-        <item>"/system/framework/arm64/boot.oat"</item>
-        <item>"/system/framework/boot.vdex"</item>
-        <item>"/system/framework/arm64/boot-core-libart.oat"</item>
-        <item>"/system/framework/boot-core-libart.vdex"</item>
-        <item>"/system/framework/boot-QPerformance.vdex"</item>
-        <item>"/system/framework/boot-UxPerformance.vdex"</item>
-        <item>"/system/lib64/libsurfaceflinger.so"</item>
-    </string-array>
-
     <!-- Flag specifying whether VoLTE is available on device -->
     <bool name="config_device_volte_available">true</bool>
 
@@ -425,32 +410,9 @@
          format is UMTS|LTE|... -->
     <string translatable="false" name="config_radio_access_family">GSM | WCDMA | LTE | CDMA | EVDO</string>
 
-    <string-array name="config_mobile_tcp_buffers">
-        <item>"lte:2097152,4194304,8388608,262144,524288,1048576"</item>
-        <item>"lte_ca:2097152,4194304,8388608,262144,524288,1048576"</item>
-        <item>"umts:4094,87380,110208,4096,16384,110208"</item>
-        <item>"hspa:4094,87380,1220608,4096,16384,1220608"</item>
-        <item>"hsupa:4094,87380,1220608,4096,16384,1220608"</item>
-        <item>"hsdpa:4094,87380,1220608,4096,16384,1220608"</item>
-        <item>"hspap:4094,87380,1220608,4096,16384,1220608"</item>
-        <item>"edge:4093,26280,35040,4096,16384,35040"</item>
-        <item>"gprs:4092,8760,11680,4096,8760,11680"</item>
-        <item>"evdo:4094,87380,524288,4096,16384,262144"</item>
-        <item>"ehrpd:4094,87380,524288,4096,16384,262144"</item>
-    </string-array>
-
     <!-- Configure wifi tcp buffersizes in the form:
          rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
     <string name="config_wifi_tcp_buffers" translatable="false">524288,2097152,4194304,262144,524288,1048576</string>
-
-    <!-- Boolean indicating if current platform supports BLE peripheral mode -->
-    <bool name="config_bluetooth_le_peripheral_mode_supported">true</bool>
-
-    <!-- Is the device capable of hot swapping an UICC Card -->
-    <bool name="config_hotswapCapable">true</bool>
-
-    <!-- Boolean indicating if current platform supports HFP inband ringing -->
-    <bool name="config_bluetooth_hfp_inband_ringing_support">true</bool>
 
     <!-- Default list of files pinned by the Pinner Service -->
     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
@@ -496,9 +458,6 @@
          or a single SIM device can have 1 phones/logical modems, but 2 physical slots (one eSIM
          and one pSIM) -->
     <integer name="config_num_physical_slots">2</integer>
-
-    <!-- If this is true, device supports Sustained Performance Mode. -->
-    <bool name="config_sustainedPerformanceModeSupported">true</bool>
 
     <!-- Flag indicating whether we should enable smart battery. -->
     <bool name="config_smart_battery_available">true</bool>
