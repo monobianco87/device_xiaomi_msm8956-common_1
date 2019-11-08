@@ -170,7 +170,6 @@ BOARD_ROOT_EXTRA_FOLDERS := \
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(VENDOR_PATH)/manifest.xml
-DEVICE_MATRIX_FILE   := $(VENDOR_PATH)/compatibility_matrix.xml
 
 # exFat
 TARGET_EXFAT_DRIVER := exfat
