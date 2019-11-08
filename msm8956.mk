@@ -247,6 +247,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ims-ext-common
 
+# IMS
+PRODUCT_PACKAGES += \
+    ims-ext-common_system
+
+    PRODUCT_BOOT_JARS += \
+    ims-ext-common_system	
+	
 # IPA Manager
 #PRODUCT_PACKAGES += \
 #    ipacm \
