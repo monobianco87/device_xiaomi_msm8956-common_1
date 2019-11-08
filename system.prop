@@ -168,6 +168,18 @@ ro.adb.secure=0 \
 ro.secure=0 \
 ro.debuggable=1
 
+# Dalvik
+PRODUCT_PROPERTY_OVERRIDES += \
+dalvik.vm.dex2oat-filter=speed \
+dalvik.vm.image-dex2oat-filter=speed \
+dalvik.vm.heapstartsize=16m \
+dalvik.vm.heapgrowthlimit=256m \
+dalvik.vm.heapsize=512m \
+dalvik.vm.heaptargetutilization=0.75 \
+dalvik.vm.heapminfree=4m \
+dalvik.vm.heapmaxfree=8m \
+ro.sys.fw.dex2oat_thread_count=8
+
 # Higher fling velocities for smooth scrolling and to provide better responsiveness - From HalogenOS Team
 ro.min.fling_velocity=140
 ro.max.fling_velocity=40000
