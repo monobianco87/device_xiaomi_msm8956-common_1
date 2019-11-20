@@ -104,6 +104,7 @@ PRODUCT_PACKAGES += \
     audio.primary.msm8952 \
     audio.r_submix.default \
     audio.usb.default \
+    libaacwrapper \
     libaudio-resampler \
     libaudioroute \
     libqcompostprocbundle \
@@ -488,4 +489,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
-
+# Wi-Fi Display
+PRODUCT_BOOT_JARS += \
+    WfdCommon
