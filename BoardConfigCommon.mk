@@ -197,6 +197,9 @@ TARGET_USES_MEDIA_EXTENSIONS := true
 # Peripheral manager
 TARGET_PER_MGR_ENABLED := true
 
+# Gestures
+TARGET_GESTURES_NODE := "/proc/touchpanel/gesture_enable"
+
 # Power
 TARGET_USES_INTERACTION_BOOST := true
 TARGET_USES_NON_LEGACY_POWERHAL := true
