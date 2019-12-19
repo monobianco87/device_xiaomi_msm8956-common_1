@@ -66,7 +66,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
 #Android net
-
 PRODUCT_PACKAGES += \
    libandroid_net \
    libandroid_net_32
@@ -146,9 +145,7 @@ PRODUCT_PACKAGES += \
     camera.device@3.3-impl \
     camera.msm8952 \
     libqomx_core \
-    Snap \
-    SnapdragonCamera \
-    SnapdragonCamera2 \
+    camera2 \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0_vendor
 
@@ -266,13 +263,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libbase_shim \
     ims-ext-common \
-    ims-ext-common_system \
+    ims-ext-common.xml \
     android.hardware.radio@1.0 \
     android.hardware.radio.config@1.0 \
     android.hardware.secure_element@1.0
-
-PRODUCT_BOOT_JARS += \
-    ims-ext-common_system
 
 # IPA Manager
 #PRODUCT_PACKAGES += \
