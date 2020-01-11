@@ -547,3 +547,8 @@ PRODUCT_PACKAGES += \
     LatinIMEGooglePrebuilt \
     PrebuiltDeskClockGoogle \
     WallpaperPickerGoogleRelease
+
+# Lineage touch service
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.xiaomi_8956
+
