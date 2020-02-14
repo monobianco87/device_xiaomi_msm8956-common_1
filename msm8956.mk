@@ -534,16 +534,3 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 PRODUCT_ODM_PROPERTIES += \
     ro.vendor.qti.va_odm.support=1
-
-# Add missing packages when building without Gapps
-PRODUCT_PACKAGES += \
-    Dialer \
-    messaging \
-    Contacts \
-    Gallery2 \
-    CalculatorGooglePrebuilt \
-    CalendarGooglePrebuilt \
-    Chrome \
-    LatinIMEGooglePrebuilt \
-    PrebuiltDeskClockGoogle \
-    WallpaperPickerGoogleRelease
