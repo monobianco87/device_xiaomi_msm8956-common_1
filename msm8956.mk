@@ -66,7 +66,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
 #Android net
-
 PRODUCT_PACKAGES += \
    libandroid_net \
    libandroid_net_32
@@ -265,14 +264,14 @@ PRODUCT_PACKAGES += \
 # IMS
 PRODUCT_PACKAGES += \
     libbase_shim \
-    ims-ext-common \
+    ims-ext-common.xml \
     ims-ext-common_system \
     android.hardware.radio@1.0 \
     android.hardware.radio.config@1.0 \
     android.hardware.secure_element@1.0
 
-PRODUCT_BOOT_JARS += \
-    ims-ext-common_system
+#PRODUCT_BOOT_JARS += \
+#    ims-ext-common_system
 
 # IPA Manager
 #PRODUCT_PACKAGES += \
@@ -500,14 +499,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
-
-# AdvancedControls
-PRODUCT_PACKAGES += \
-    AdvancedControls
-
-#Zuk Extras
-PRODUCT_PACKAGES += \
-    ZukPref
 
 
 # Cast hacks
