@@ -81,8 +81,8 @@ PRODUCT_COPY_FILES += \
 
 # Device-specific Settings
 PRODUCT_PACKAGES += \
-    XiaomiParts
-
+    XiaomiParts \
+    XiaomiDoze
 
 # Audio
 PRODUCT_PACKAGES += \
