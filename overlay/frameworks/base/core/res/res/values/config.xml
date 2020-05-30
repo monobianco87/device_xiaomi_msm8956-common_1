@@ -527,6 +527,12 @@
     <!-- Whether device supports an alt. ambient display -->
     <bool name="config_alt_ambient_display">true</bool>
 
+    <!-- Default LED on time for notification LED in milliseconds. -->
+    <integer name="config_defaultNotificationLedOn">1000</integer>
+
+    <!-- Default LED off time for notification LED in milliseconds. -->
+    <integer name="config_defaultNotificationLedOff">2000</integer>
+
 </resources>
 
 
