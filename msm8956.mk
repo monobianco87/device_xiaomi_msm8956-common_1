@@ -364,7 +364,9 @@ PRODUCT_PACKAGES += \
 # Qualcomm dependencies
 PRODUCT_PACKAGES += \
     libtinyxml \
-    libxml2
+    libxml2 \
+    libqti_vndfwk_detect \
+    libvndfwk_detect_jni.qti
 
 # Ramdisk
 PRODUCT_PACKAGES += \
